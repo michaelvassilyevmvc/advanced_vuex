@@ -20,7 +20,7 @@
 </template>
 
 <script>
-import { ref } from "vue";
+import { ref, computed } from "vue";
 import { useStore } from "vuex";
 
 export default {
@@ -36,6 +36,7 @@ export default {
 
     return {
       blogs,
+      user: computed(() => store.state.user),
     };
   },
 };
